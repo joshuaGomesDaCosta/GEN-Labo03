@@ -23,7 +23,7 @@
 *.zip
 *.tar.gz
 *.rar
-idea/
+.idea/
 *.iml
 
 
