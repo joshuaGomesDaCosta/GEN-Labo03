@@ -25,4 +25,9 @@ public class PlayerTest {
         assertNotEquals(Piece.botte, p1.getPiece());
         assertNotEquals(Piece.chien, p2.getPiece());
     }
+
+    @Test
+    public void playerTestTakeTurn(){
+        p1.takeTurn();
+    }
 }
