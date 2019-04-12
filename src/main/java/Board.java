@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Board {
@@ -16,6 +17,21 @@ public class Board {
 
     public LinkedList<Square> getSquares() {
         return squares;
+    }
+
+    public Square getSquare(Square oldLoc, int fv) {
+        Iterator iterator = squares.iterator();
+        Square square;
+
+        int i = 0;
+        while (iterator.hasNext()) {
+            if(iterator.next().equals(oldLoc)) {
+                break;
+            }
+            i++;
+        }
+
+        return squares.get((i + fv) % NB_SQUARES);
     }
 
 }
