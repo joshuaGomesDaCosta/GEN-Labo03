@@ -1,6 +1,6 @@
-import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerTest {
     Player p1 = new Player("Jhon");
@@ -18,7 +18,11 @@ public class PlayerTest {
     @Test
     public void playerTestPiece(){
         p1.setPiece(Piece.deACoudre);
+
         assertEquals(Piece.deACoudre, p1.getPiece());
         assertEquals(Piece.brouette, p2.getPiece());
+
+        assertNotEquals(Piece.botte, p1.getPiece());
+        assertNotEquals(Piece.chien, p2.getPiece());
     }
 }
