@@ -10,18 +10,18 @@ public enum Piece {
 
     private final String name;
     private final int id;
-    //private Square location;
+    private Square location;
 
     Piece(String name, int id){
         this.name = name;
         this.id = id;
     }
-    /*
+
     Piece(String name, int id, Square location){
         this(name, id);
         this.location = location;
     }
-    */
+
     public Piece getPiece(){
         return this;
     }
@@ -29,15 +29,14 @@ public enum Piece {
     public int getId(){
         return id;
     }
-    /*
+
     public void setLocation(Square location) {
         this.location = location;
     }
 
-    public Square getLocation() {
+    public Square getLocation(){
         return location;
     }
-    */
 
     @Override
     public String toString(){
