@@ -1,9 +1,11 @@
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Board {
     private LinkedList<Square> squares;
     private final int NB_SQUARES = 40;
+    private List<String> pieces = Arrays.asList("Dés à coudre", "Brouette", "Botte", "Chien",
+                        "Voiture", "Fer à repasser", "Chapeau", "Bateau");
+    private Random rand = new Random();
 
     public Board() {
         squares = new LinkedList<>();
@@ -34,4 +36,14 @@ public class Board {
         return squares.get((i + fv) % NB_SQUARES);
     }
 
+    public Square getStart() {
+        return squares.getFirst();
+    }
+
+    public String getPiece() {
+        int index = rand.nextInt(pieces.size());
+        String piece = pieces.get(index);
+        pieces.remove(piece);
+        return piece;
+    }
 }
