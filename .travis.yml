@@ -1,7 +1,2 @@
  language: java
-<<<<<<< HEAD
-
  script: mvn clean test -B
-=======
- script: mvn clean test -B
->>>>>>> 67140988eb32abd7b98d0f154972afbc73f99349
