@@ -2,10 +2,15 @@ public class Piece {
     private String name;
     private Square location;
 
-    Piece(String name, Square location){
+    protected Piece(String name){
+        this.name = name;
+    }
+
+    public Piece(String name, Square location){
         this.name = name;
         this.location = location;
     }
+
 
     public Piece getPiece(){
         return this;
