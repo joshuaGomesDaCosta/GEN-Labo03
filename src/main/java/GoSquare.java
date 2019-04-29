@@ -15,8 +15,12 @@
 
 public class GoSquare extends Square{
 
-    public GoSquare(String nom){
-        super(nom);
+    /**
+     * @brief       : constructeur à 1 paramètre
+     * @param name   : String, nom de la case
+     */
+    public GoSquare(String name){
+        super(name);
     }
 
     public void landedOn( Player p){

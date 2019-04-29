@@ -15,8 +15,12 @@
 
 public class IncomeTaxSquare extends Square{
 
-    public IncomeTaxSquare(String nom){
-        super(nom);
+    /**
+     * @brief       : constructeur à 1 paramètre
+     * @param name   : String, nom de la case
+     */
+    public IncomeTaxSquare(String name){
+        super(name);
     }
 
     public void landedOn( Player p){

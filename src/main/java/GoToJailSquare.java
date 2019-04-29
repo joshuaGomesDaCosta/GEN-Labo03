@@ -17,12 +17,12 @@ public class GoToJailSquare extends Square{
     private RegularSquare jail;
 
     /**
-     * @brief       : constructeur à 2 paramètre
-     * @param nom   : String, nom de la case
+     * @brief       : constructeur à 2 paramètres
+     * @param name   : String, nom de la case
      * @param jail  : RegularSquare, case prison
      */
-    public GoToJailSquare(String nom, RegularSquare jail){
-        super(nom);
+    public GoToJailSquare(String name, RegularSquare jail){
+        super(name);
         this.jail = jail;
     }
 

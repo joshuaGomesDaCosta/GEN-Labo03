@@ -15,8 +15,12 @@
 
 public class RegularSquare extends Square{
 
-    public RegularSquare(String nom){
-        super(nom);
+    /**
+     * @brief       : constructeur à 1 paramètre
+     * @param name   : String, nom de la case
+     */
+    public RegularSquare(String name){
+        super(name);
     }
 
     public void landedOn( Player p){
