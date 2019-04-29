@@ -1,3 +1,18 @@
+/*
+ -----------------------------------------------------------------------------------
+ Laboratoire : Labo03
+ Fichier     : Die.java
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Date        : 05.04.2019
+
+ But         : Permet de gérer le résultat d'un jet de dés
+
+ Remarque(s) :
+
+ Compilateur : MinGW-g++ 6.3.0
+ -----------------------------------------------------------------------------------
+ */
+
 import java.util.Random;
 
 public class Die {
@@ -6,14 +21,22 @@ public class Die {
     protected final int minFace = 1;
     private int value;
 
+    //Constructeur
     public Die(){
         value = minFace;
     }
 
+    /**
+     * @brief   : Lancé les dés
+     */
     public void roll(){
         value =  minFace + rand.nextInt(maxFace - minFace);
     }
 
+    /**
+     * @brief   : Obtient la valeur sur le dés après le lancé
+     * @return  : int de la valeur du dés
+     */
     public int getFaceValue(){
         return value;
     }

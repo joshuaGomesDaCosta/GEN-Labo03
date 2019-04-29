@@ -1,43 +1,44 @@
-public enum Piece {
-    deACoudre("Dés à coudre",1),
-    brouette("Brouette",2),
-    botte("Botte",3),
-    chien("Chien",4),
-    voiture("Voiture",5),
-    ferARepasser("Fer à repasser",6),
-    chapeau("Chapeau",7),
-    bateau("Bateau",8);
+/*
+ -----------------------------------------------------------------------------------
+ Laboratoire : Labo03
+ Fichier     : Piece.java
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Date        : 05.04.2019
 
-    private final String name;
-    private final int id;
-    //private Square location;
+ But         : Pièce possédé par le joueur
 
-    Piece(String name, int id){
+ Remarque(s) :
+
+ Compilateur : MinGW-g++ 6.3.0
+ -----------------------------------------------------------------------------------
+ */
+
+public class Piece {
+    private String name;
+    private Square location;
+
+    //Constructeur
+    protected Piece(String name){
         this.name = name;
-        this.id = id;
     }
-    /*
-    Piece(String name, int id, Square location){
-        this(name, id);
+
+    public Piece(String name, Square location){
+        this.name = name;
         this.location = location;
     }
-    */
+
+    //get et set
     public Piece getPiece(){
         return this;
     }
 
-    public int getId(){
-        return id;
-    }
-    /*
     public void setLocation(Square location) {
         this.location = location;
     }
 
-    public Square getLocation() {
+    public Square getLocation(){
         return location;
     }
-    */
 
     @Override
     public String toString(){
