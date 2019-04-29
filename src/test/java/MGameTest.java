@@ -10,20 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MGameTest {
     @Test
     public void itShouldWorkBetween2and8Players() {
-        int i = 2;
-        try{
-
-            List<String> players = new ArrayList<String>();
-            players.add("joueur1");
-            players.add("joueur2");
-            for (i = 2; i < 8; i++) {
+        List<String> players = new ArrayList<String>();
+        players.add("joueur1");
+        for (int i = 2; i < 8; i++) {
+            try {
                 players.add("joueur" + i);
                 new MGame(players.toArray(new String[]{}));
-            }
-        }
-        catch(Exception e){
-            if(e.getMessage() == "pas assez de joueurs" || e.getMessage() == "trop de joueurs"){
-                fail(i +" joeurs");
+            } catch (Exception e) {
+                fail(" MGame throw an unexpected exception");
             }
         }
 
@@ -40,6 +34,17 @@ public class MGameTest {
         }
         catch(Exception e){
             assertTrue(true);
+        }
+    }
+
+    @Test
+    public void playGameShouldWork(){
+        try{
+            MGame game = new MGame(new String[]{"joueur1","joueur2"});
+            game.playGame();
+        }
+        catch(Exception e) {
+            fail("playGame throw an unexpected exception");
         }
     }
 }
