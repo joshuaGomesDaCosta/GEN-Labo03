@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MGame {
     private final Board board = new Board();
-    private Die[] dice = new Die[]{new Die(),new Die()};
+    private Cup cup = new Cup(2);
     private List<Player> players = new ArrayList<Player>();
     private final int roundCnt = 20;
 
@@ -34,7 +34,7 @@ public class MGame {
         }
 
         for(String name: playersName){
-            players.add(new Player(name, dice, board));
+            players.add(new Player(name, cup, board));
         }
     }
 
