@@ -9,7 +9,8 @@
  Remarque(s) :
 
  Compilateur : MinGW-g++ 6.3.0
- -----------------------------------------------------------------------------------
+ ----
+ -------------------------------------------------------------------------------
  */
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class MGame {
         }
 
         for(String name: playersName){
-            players.add(new Player(name, cup, board));
+            //players.add(new Player(name, cup, board));
         }
     }
 
